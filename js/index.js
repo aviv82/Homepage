@@ -1,8 +1,12 @@
-"use strict";
-
 // this page will document my explorations in js
 
-// ^ this is how you make a single line comment
+"use strict";
+
+/* ^ quick note before we get started. 
+the above text is a generic bit of code identifying the page as js 
+similar to !DOCTYPE for html */
+
+// this is how you make a single line comment
 
 /* this is how you make a multiple lines comment
 
@@ -103,3 +107,123 @@ console.log(Math.ceil(5.673429));
 // ^ this time the method rounded the same number up rather than down
 
 // ok that was lesson 1 will do this again soon
+
+// lesson 2 - variables:
+
+/* there are a few types of variables. the old school one is - var
+var is limited in ways i don't fully understand yet. new js ES6 and up 
+invented - let which is more compatible again, not sure how/why but this
+is the one to use. then there is - const which is a variable which cant be reassigned.
+const also must be assigned a value when declared. */
+
+var callMe = "maybe";
+
+console.log(callMe); //will print - maybe (string assigned to var)
+
+let myAge = 39;
+/* note the way we name these things, first word is lowercase, first letter of next is uppercase.
+this is called - camel case */
+
+console.log(myAge);
+
+// let variables can be reassigned. let's try that:
+
+myAge = 40;
+
+// ^ variables can be assigned various types of data, such as strings, numbers and booleans.
+
+console.log(myAge);
+
+/* ^ to reassign we just need to write the name of the variable 
+and assign a new value via the = property */
+
+const thisMuchIs = true;
+
+console.log(thisMuchIs);
+
+/* ^ now with const variables we cant reassign. if we try that we will get an error.
+also we must assign a value as soon as we declare a const, otherwise we get a syntax error */
+
+let theAnswerIs;
+
+// let (and var) variants can just be left unassigned nbd
+
+console.log(theAnswerIs);
+
+// an unassigned variable is by default - undefined
+
+// alright lets look at how variables work with arithmetic properties (see above)
+
+let xMark = 22;
+let gMark = 16;
+let cMark = 7;
+let sMark = 46;
+let fMark = 2;
+
+console.log(xMark + xMark);
+console.log(cMark - fMark);
+console.log(gMark / fMark);
+console.log(sMark * xMark);
+
+// lets kick it up a notch:
+
+console.log((cMark % fMark) + (gMark - xMark));
+
+// we can also use arithmetic properties with string assignments:
+
+let theresALimitTo = "your love";
+let papaWasA = "rolling stone";
+let itsAll = "in the game";
+
+console.log("how deep is " + theresALimitTo + "?");
+console.log("like a " + papaWasA);
+
+/* this leads us to - interpolate values - another new-ish feature introduced with ES6.
+interpolate values allow us to skip the arithmetic properties when connecting strings */
+
+console.log(`is ${theresALimitTo} a ${papaWasA} or a piece ${itsAll}?`);
+
+// ^ make sure to use `` to bind the interpolation and not regular ''
+
+// back to arithmetics and numbers
+
+let aMark = 80;
+let bMark = 40;
+let nMark = 20;
+
+// we can reassign number values using arithmetic properties
+
+nMark -= 1;
+
+console.log(nMark); // will print 19
+
+// but wait! theres more lol
+nMark = 20; // lets reset the original reassignment
+
+nMark--;
+
+/* ^ instead of writing a long expression - nMark -= 1; - we can write the above short form
+and get  the same value, a subtraction by increment of one*/
+
+console.log(nMark);
+
+// some more examples
+
+bMark++;
+aMark--;
+
+console.log(bMark / aMark);
+
+// alright last thing for lesson two
+
+// we can use the property - typeof - to identify the type of data in a variable
+
+const dontBe = "cruel";
+const toAHeartThats = true;
+const repeatChorusX = 2;
+
+console.log(typeof dontBe); // will print - string
+console.log(typeof toAHeartThats); // will print - boolean
+console.log(typeof repeatChorusX); // will print - number
+
+// end of lesson 2
