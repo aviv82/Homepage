@@ -311,7 +311,7 @@ if their arthropod is an insect */
 
 let numberOfLegs = 8;
 
-// we will use a more advanced condition property - === - to define number of legs for insects
+// we will use a more advanced condition operator - === - to define number of legs for insects
 
 if (numberOfLegs === 6) {
   console.log("arthropod is an insect");
@@ -320,3 +320,42 @@ if (numberOfLegs === 6) {
 }
 
 // stellar now we can input different leg numbers and classify our arthropod
+
+/* here are a few more examples of conditional operators:
+
+< less than
+> more than
+>= more or equal to
+<= less or equal to
+=== equal to
+!== unequal to */
+
+/* but now again we have a problem. some arthropods have 6 legs but are not insects. for example;
+springtails. what do we do then? we need to have more than one condition in order to be sure. */
+
+// ok. lets try to set up two or more conditions that need to be met for our arthropod to be an insect
+
+// hmm. maybe body joints? insects always have 3 body joints; head, body and tail.
+// we can create a condition for body joints and add it to the legs number condition
+
+// a bit of a long variable name but i want it to be descriptive
+
+let bodyJointsNumber = 2;
+
+// ok lets add this to the leg number
+
+if (bodyJointsNumber === 3 && numberOfLegs === 6) {
+  console.log("arthropod is an insect");
+} else {
+  console.log("arthropod is not an insect");
+}
+
+/* did it! so now we have to conditions that need to be met in order for our arthropod to 
+be an insect, leg number AND body joints number. i express this AND by using the && operator.
+this operator means that both conditions must be met for the if condition to be true, 
+if only one holds the condition will be considered false and follow to the - else - outcome;
+not an insect! */
+
+// there are two more operators aside from &&; ! and ||.
+// ! means not, it will accept the opposite value of what was described in the condition
+// || means or, it will require only one of the specified conditions to pass for the condition to pass
