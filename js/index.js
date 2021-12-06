@@ -227,3 +227,96 @@ console.log(typeof toAHeartThats); // will print - boolean
 console.log(typeof repeatChorusX); // will print - number
 
 // end of lesson 2
+// lesson three
+
+// ok lets try to use the console to create a simple calculator
+// im thinking maybe a world clock
+
+// declare and assign current time variable for belgium
+
+let timeInBelgium = 12;
+
+// declare and assign world clocks using belgium clock
+// this will allow us to adjust all clocks by reassigning the belgium one
+
+let timeInTokyo = timeInBelgium + 8;
+let timeInHalifax = timeInBelgium - 5;
+let timeInMoscow = timeInBelgium + 2;
+let timeInLa = timeInBelgium - 9;
+
+// console will calculate and show current times around the world based on belgium time
+// it can be updated and recalculated by adjusting just one variable
+
+console.log(`current time in belgium is ${timeInBelgium}`);
+console.log(`current time in halifax is ${timeInHalifax}`);
+console.log(`current time in tokyo is ${timeInTokyo}`);
+console.log(`current time in moscow is ${timeInMoscow}`);
+console.log(`current time in la is ${timeInLa}`);
+
+/* now is this clock perfect? certainly not. for one there is no 24 hour cap 
+so we will get impossible values like 27 o'clock. another issue is not being able to 
+denote minutes and tell when a country is a day ahead or behind. to repair this device
+will require some more advanced code */
+
+// ok i will get back to this world clock when i am a bit better at js
+
+// for now lets look at something else, if conditions.
+
+// if conditions use booleans to determine outcome when more than one result is possible
+
+/* lets try a simple one here, an if condition to determine wether an arthropod is an insect
+based on wings */
+
+// here is our variable: it says that the arthropod has wings
+
+let hasWings = true;
+
+// ok lets create our if condition
+
+if (hasWings) {
+  console.log("arthropod is an insect.");
+}
+
+/* now if we reassign the variable value to false the if condition will not be met
+ and nothing will be printed to the console */
+
+// but this is not really good enough. we have a few problems with this condition
+// for one we would like to get a log in the console wether arthropod is insect or not
+// lets try to fix this by adding a second property to the condition - else
+
+// an else property tells the program what to do if the if condition is not met
+
+// ok lets write a 'not arthropod' log
+
+if (hasWings) {
+  console.log("arthropod is an insect");
+} else {
+  console.log("arthropod is not an insect");
+}
+
+/* great, but there is more to it isn't there? some insects, for example; silverfish, do not have wings. 
+wings is only one of the conditions we need to meet in order to classify our arthropod as an insect */
+
+// alright well lets try using a different condition - number of legs - to classify our arthropod.
+
+/* we will begin by setting a variable for number of legs. there are two ways we can do this. 
+insects typically have six legs, so we can create a boolean such as - sixLegs - and write a similar 
+condition to the one we wrote for the wings. But maybe lets try and do something a bit more interesting.
+instead lets create a variable where the user can input different numbers of legs and learn 
+if their arthropod is an insect */
+
+// ok ok enough rambling, lets do this
+
+// declare and assign variable for arthropod number of legs
+
+let numberOfLegs = 8;
+
+// we will use a more advanced condition property - === - to define number of legs for insects
+
+if (numberOfLegs === 6) {
+  console.log("arthropod is an insect");
+} else {
+  console.log("arthropod is not an insect");
+}
+
+// stellar now we can input different leg numbers and classify our arthropod
