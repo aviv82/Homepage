@@ -33,7 +33,19 @@
 }
 
 .poem {
+  margin-top: 8%;
   font-family: var(--estonia-font);
   color: var(--black);
   font-size: 34px;
+  margin-bottom: 10%;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.show {
+  /* opacity: 1; */
+  transition: opacity 2s ease-in-out;
 }

@@ -21,13 +21,15 @@ const App = () => {
     poemsInit();
   }, []);
 
+  /*
   poems.length != 0
     ? console.log("poems", poems.data[0].attributes.title)
     : null;
+*/
 
   return (
     <div className="wrapper">
-      {poems.length !== 0 ? <Intro poem={poems.data[0]} /> : <></>}
+      {poems.length !== 0 ? <Intro poem={poems.data[0]} /> : <React.Fragment />}
       <NavBar />
       <Hero />
       <Contact />
