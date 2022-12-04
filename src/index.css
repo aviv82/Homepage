@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Estonia&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +8,14 @@
 
 :root {
   --raunchy: rgb(1, 2, 3);
+  --estonia-font: "Estonia", cursive;
+  --black: rgba(34, 23, 0, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gaunt {
@@ -17,4 +26,26 @@
 .font {
   color: var(--raunchy);
   font-family: "EB Garamond", serif;
+}
+
+.text-test {
+  font-family: var(--estonia-font);
+}
+
+.poem {
+  margin-top: 8%;
+  font-family: var(--estonia-font);
+  color: var(--black);
+  font-size: 34px;
+  margin-bottom: 10%;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.show {
+  /* opacity: 1; */
+  transition: opacity 2s ease-in-out;
 }
