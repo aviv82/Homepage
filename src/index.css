@@ -10,12 +10,20 @@
   --raunchy: rgb(1, 2, 3);
   --estonia-font: "Estonia", cursive;
   --black: rgba(34, 23, 0, 1);
+  --brown: rgba(118, 80, 0, 1);
+  --ochre: rgba(226, 153, 1, 1);
+  --white: rgba(255, 254, 251, 1);
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(
+    rgba(226, 153, 1, 1),
+    rgba(255, 254, 251, 1),
+    rgba(118, 80, 0, 1)
+  );
 }
 
 .gaunt {
@@ -33,7 +41,7 @@
 }
 
 .poem {
-  margin-top: 8%;
+  margin-top: 10%;
   font-family: var(--estonia-font);
   color: var(--black);
   font-size: 34px;
