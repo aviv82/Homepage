@@ -6,6 +6,14 @@ const App = () => {
   const [works, setWorks] = useState([]);
   const [poems, setPoems] = useState([]);
 
+  /*
+  const beautiful = document.querySelectorAll("#beautiful path");
+
+  for (let i = 0; i < beautiful.length; i++) {
+    console.log("beautiful", i, beautiful[i].getTotalLength());
+  }
+*/
+
   const worksInit = async () => {
     const workPromise = await get("/api/works?populate=media");
     setWorks(workPromise);
