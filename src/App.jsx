@@ -6,6 +6,14 @@ const App = () => {
   const [works, setWorks] = useState([]);
   const [poems, setPoems] = useState([]);
 
+  /*
+  const ampersand = document.querySelectorAll("#ampersand path");
+
+  for (let i = 0; i < beautiful.length; i++) {
+    console.log("ampersand", i, beautiful[i].getTotalLength());
+  }
+*/
+
   const worksInit = async () => {
     const workPromise = await get("/api/works?populate=media");
     setWorks(workPromise);
@@ -21,11 +29,10 @@ const App = () => {
     poemsInit();
   }, []);
 
-  /*
-  poems.length != 0
-    ? console.log("poems", poems.data[0].attributes.title)
-    : null;
-*/
+  if (works.length !== 0 && poems.length !== 0) {
+    console.log("fetch works", works.data);
+    console.log("fetch poems", poems.data[0].attributes);
+  }
 
   return (
     <div className="wrapper">
@@ -62,12 +69,7 @@ export default App;
   const parsedPoem = [];
   const valueArray = [];
 
-  if (works.length !== 0) {
-    console.log("fetch works", works.data);
-    console.log("fetch poems", poems.data[0].attributes.body);
-    firstPoem.push(
-      parser.parseFromString(poems.data[0].attributes.body, "text/html")
-    );
+  
 
     for (let i = 0; i < firstPoem[0].body.childElementCount; i++) {
       console.log("parsed", i, firstPoem[0].body.children[i]);
@@ -88,4 +90,31 @@ export default App;
       valueArray[0]
     );
   }
+*/
+
+/*
+  poems.length != 0
+    ? console.log("poems", poems.data[0].attributes.title)
+    : null;
+*/
+/*
+  const positionCalculator = () => {
+    var reveals = document.querySelectorAll(`.disconnect`);
+
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      // const revealPoint = 200;
+
+      if (revealTop < windowHeight - 200) {
+        // return true;
+        reveals[i].classList.add("connect");
+      } else {
+        // return false;
+        reveals[i].classList.remove("connect");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", positionCalculator);
 */

@@ -1,0 +1,4 @@
+.greeting {
+  font-family: var(--body-font);
+  color: var(--black);
+}

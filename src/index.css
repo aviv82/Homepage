@@ -7,45 +7,43 @@
 @tailwind utilities;
 
 :root {
-  --raunchy: rgb(1, 2, 3);
-  --estonia-font: "Estonia", cursive;
+  --poem-font: "Estonia", cursive;
+  --libre-font: "Libre Baskerville", serif;
+  --body-font: "EB Garamond", serif;
+
   --black: rgba(34, 23, 0, 1);
+  --brown: rgba(118, 80, 0, 1);
+  --ochre: rgba(226, 153, 1, 1);
+  --white: rgba(255, 254, 251, 1);
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(
+    rgba(226, 153, 1, 1),
+    rgba(255, 254, 251, 1),
+    rgba(118, 80, 0, 1)
+  );
 }
 
 .gaunt {
   color: brown;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--body-font);
 }
 
 .font {
-  color: var(--raunchy);
-  font-family: "EB Garamond", serif;
+  margin-bottom: 840px;
+  color: var(--brown);
+  font-family: var(--libre-font);
+}
+
+.connect {
+  color: red;
+  margin: 40px;
 }
 
 .text-test {
-  font-family: var(--estonia-font);
-}
-
-.poem {
-  margin-top: 8%;
-  font-family: var(--estonia-font);
-  color: var(--black);
-  font-size: 34px;
-  margin-bottom: 10%;
-}
-
-.hide {
-  opacity: 0;
-  transition: opacity 4s ease-in-out;
-}
-
-.show {
-  /* opacity: 1; */
-  transition: opacity 2s ease-in-out;
+  font-family: var(--poem-font);
 }

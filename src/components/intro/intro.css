@@ -1,0 +1,30 @@
+.poem {
+  margin-top: 10%;
+  font-family: var(--poem-font);
+  color: var(--black);
+  margin-bottom: 10%;
+}
+
+.first {
+  opacity: 0;
+  font-size: 40px;
+  animation: show 4s ease forwards;
+}
+
+.hide {
+  opacity: 0;
+  font-size: 40px;
+  transition: all 4s ease-in-out;
+}
+
+.show {
+  font-size: 42px;
+  transition: all 2s ease-in-out;
+}
+
+@keyframes show {
+  to {
+    font-size: 42px;
+    opacity: 1;
+  }
+}
