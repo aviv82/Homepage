@@ -1,4 +1,4 @@
-export const Beautiful = ({ face }) => {
+export const BeautifulSVG = ({ face }) => {
   return (
     <svg
       className={face}

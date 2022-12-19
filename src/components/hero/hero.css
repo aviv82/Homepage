@@ -1,0 +1,38 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greet {
+  font-family: var(--body-font);
+  color: var(--black);
+  font-size: 30px;
+  margin: 8%;
+}
+
+.dear {
+  font-size: 40px;
+}
+
+.home {
+  font-size: 60px;
+}
+
+.someplace {
+  font-size: 48px;
+}
+
+.red {
+  color: red;
+}
+
+.blah {
+  font-family: var(--body-font);
+  font-size: 60px;
+}
+
+.meh {
+  font-family: var(--libre-font);
+  font-size: 40px;
+}

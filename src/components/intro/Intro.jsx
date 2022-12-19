@@ -1,30 +1,13 @@
+import "./intro.css";
+
 import React from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
 import { useState } from "react";
 
 export const Intro = ({ poem }) => {
   const [isScroll, setIsScroll] = useState(0);
 
-  /*
-  const locationRef = useRef();
-  const [isViewable, setIsViewable] = useState();
-
-  console.log("is it visible?", isViewable);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((values) => {
-      const value = values[0];
-      setIsViewable(value.isIntersecting);
-    });
-    observer.observe(locationRef.current);
-  }, []);
-  */
-
   const handlePoemScroll = () => {
     setIsScroll(window.scrollY);
-    // scrollYValue.current = window.scrollY;
-    // console.log("scroll:", isScroll);
   };
 
   window.addEventListener("scroll", handlePoemScroll);
@@ -51,7 +34,6 @@ export const Intro = ({ poem }) => {
           className={
             isScroll >= (poem.attributes.line.length + 2) * 30 ? "show" : "hide"
           }
-          // ref={locationRef}
           key={poem.attributes.line.length + 2}
         >
           <br></br>-

@@ -1,0 +1,43 @@
+.blank {
+  stroke: var(--black);
+  stroke-width: 0.6px;
+  fill: transparent;
+  animation: all 2s ease-in-out forwards;
+}
+
+.drawn {
+  stroke: var(--black);
+  fill: var(--black);
+  stroke-width: 0.6px;
+  animation: all 4s ease-in-out forwards;
+}
+
+.blank path:nth-child(1) {
+  stroke-dasharray: 282;
+  stroke-dashoffset: 282;
+  transition: all 4s ease-in-out 0.4s;
+}
+
+.drawn path:nth-child(1) {
+  stroke-dasharray: 282;
+  stroke-dashoffset: 0;
+  transition: all 4s ease-in-out 0.4s;
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--black);
+  }
+}
+
+@keyframes empty {
+  from {
+    fill: var(--black);
+  }
+  to {
+    fill: transparent;
+  }
+}
